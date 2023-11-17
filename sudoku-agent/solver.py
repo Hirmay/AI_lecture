@@ -7,7 +7,7 @@ from pygame_utils import *
 
 
 current_grid = grids[2]
-
+solver_no = int(input("Enter 0 for solving it using backtrack (no heuristics), 1 via Filtering and 2 via MRV\n"))
 # setting up pygame
 screen = pygame.display.set_mode((505, 630))
 # icon = pygame.image.load('icon.png')
@@ -142,7 +142,6 @@ flag2 = 0
 rs = 0
 error = 0
 
-
 while run:
     screen.fill((255, 255, 255))
 
@@ -204,12 +203,15 @@ while run:
                 current_grid = grids[2]
 
     if flag2 == 1:
-        #if solve_using_backtrack(current_grid) == False:
-        #if solve_using_filtering(current_grid) == False:
-        if solve_using_mrv(current_grid) == False:
-            error = 1
+        if solver_no == 0:
+            solve_using_backtrack(current_grid)    
+        elif solver_no == 1: 
+            solve_using_filtering(current_grid)
+        elif solver_no == 2: 
+            solve_using_mrv(current_grid)
         else:
-            rs = 1
+            error("Enter valid input")
+        rs = 1
         flag2 = 0
 
     if val != 0:
