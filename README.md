@@ -5,4 +5,4 @@
 - Tic-Tac-Toe
 - Evolutionary algorithm example
 
-Link to Presentation: https://docs.google.com/presentation/d/1aHodMQJkwWT1nBfGzuLN353fNkkkB4wVd28x8ycqaIk/edit?usp=sharing
+Link to the Presentation: https://docs.google.com/presentation/d/1aHodMQJkwWT1nBfGzuLN353fNkkkB4wVd28x8ycqaIk/edit?usp=sharing
